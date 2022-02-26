@@ -13,10 +13,9 @@
 Hay muchas maneras de correr una spring boot de manera local. Una manera de ejecutarla es:
 - Descargar repositorio de 
 - Posesionarse sobre la carpeta del proyecto
-- Ejecutar el siguiente script [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) de la siguiente manera:
+- Ejecutar el siguiente script [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) de la siguiente manera: ```mvn spring-boot:run```
+- Abrir en un navegador web ```http://localhost:8080```
 
-```shell
-mvn spring-boot:run
-```
+
 ## Tiempo Real prueba
 12 horas
