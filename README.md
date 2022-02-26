@@ -1,12 +1,12 @@
 # ProfileApp
 ## Prueba técnica de zemoga
 
-## Requerimientos
-- spring boot
-- java 11.0.13
-- maven 3.8
-- thymeleaf
-- junit
+## Requerimientos tecnologicos
+- Spring Boot
+- Java JDK 11.0.13
+- Maven 3.8
+- Thymeleaf
+- jUnit + Mockito
 
 
 ## Pasos para ejecutar proyecto
