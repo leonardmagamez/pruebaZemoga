@@ -4,7 +4,7 @@
 ## Requerimientos
 - spring boot
 - java 11.0.13
-- maven 4.0
+- maven 3.8
 - thymeleaf
 - junit
 
