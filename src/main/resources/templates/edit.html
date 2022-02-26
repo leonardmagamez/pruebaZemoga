@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Update Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/shards.min.css">
+    </head>
+    <body>
+    	<div class="container my-5">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<a th:href="@{/}" class="btn btn-outline-primary"> back </a>
+    			</div>
+    		</div>	
+    		<div class="row">
+    			<div class="col-md-12">
+    				<h2>Update Portfolio</h2>
+    			</div>
+    		</div>
+	        <div class="col-md-12">
+	         	<form action="#" th:action="@{/update/{id}(id=${portfolio.idportfolio})}" th:object="${portfolio}" method="post">
+	         		<div class="row">
+		         		<div class="form-group col-md-12">
+							<label for="description" class="col-form-label">Description</label>
+							<textarea type="text" th:field="*{description}" class="form-control" id="description" placeholder="description"></textarea>
+							<span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-12">
+							<label for="experienceSummary" class="col-form-label">Experience Summary</label>
+							<textarea type="text" th:field="*{experienceSummary}" class="form-control" id="experienceSummary" placeholder="experienceSummary"></textarea>
+							<span th:if="${#fields.hasErrors('experienceSummary')}" th:errors="*{experienceSummary}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="id" class="col-form-label">ID</label>
+							<input type="number" th:field="*{id}" class="form-control" id="id" placeholder="id">
+							<span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="imageUrl" class="col-form-label">Image URL</label>
+							<input type="text" th:field="*{imageUrl}" class="form-control" id="imageUrl" placeholder="imageUrl">
+							<span th:if="${#fields.hasErrors('imageUrl')}" th:errors="*{imageUrl}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="lastNames" class="col-form-label">Last Names</label>
+							<input type="text" th:field="*{lastNames}" class="form-control" id="lastNames" placeholder="lastNames">
+							<span th:if="${#fields.hasErrors('lastNames')}" th:errors="*{lastNames}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="names" class="col-form-label">Names</label>
+							<input type="text" th:field="*{names}" class="form-control" id="names" placeholder="names">
+							<span th:if="${#fields.hasErrors('names')}" th:errors="*{names}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-12">
+							<label for="tittle" class="col-form-label">Tittle</label>
+							<input type="text" th:field="*{tittle}" class="form-control" id="tittle" placeholder="tittle">
+							<span th:if="${#fields.hasErrors('tittle')}" th:errors="*{tittle}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="twitterUserId" class="col-form-label">Twitter User ID</label>
+							<input type="text" th:field="*{twitterUserId}" class="form-control" id="twitterUserId" placeholder="twitterUserId">
+							<span th:if="${#fields.hasErrors('twitterUserId')}" th:errors="*{twitterUserId}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="twitterUserName" class="col-form-label">Twitter User Name</label>
+							<input type="text" th:field="*{twitterUserName}" class="form-control" id="twitterUserName" placeholder="twitterUserName">
+							<span th:if="${#fields.hasErrors('twitterUserName')}" th:errors="*{twitterUserName}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="userId" class="col-form-label">User ID</label>
+							<input type="text" th:field="*{userId}" class="form-control" id="userId" placeholder="userId">
+							<span th:if="${#fields.hasErrors('userId')}" th:errors="*{userId}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="address" class="col-form-label">Address</label>
+							<input type="text" th:field="*{address}" class="form-control" id="address" placeholder="address">
+							<span th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="email" class="col-form-label">Email</label>
+							<input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Email">
+							<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="experience" class="col-form-label">Experience</label>
+							<input type="text" th:field="*{experience}" class="form-control" id="experience" placeholder="experience">
+							<span th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="imagePath" class="col-form-label">Image Path</label>
+							<input type="text" th:field="*{imagePath}" class="form-control" id="imagePath" placeholder="imagePath">
+							<span th:if="${#fields.hasErrors('imagePath')}" th:errors="*{imagePath}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="name" class="col-form-label">Name</label>
+							<input type="text" th:field="*{name}" class="form-control" id="name" placeholder="name">
+							<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="phone" class="col-form-label">Phone</label>
+							<input type="text" th:field="*{phone}" class="form-control" id="phone" placeholder="phone">
+							<span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="twitterUser" class="col-form-label">Twitter User</label>
+							<input type="text" th:field="*{twitterUser}" class="form-control" id="twitterUser" placeholder="twitterUser">
+							<span th:if="${#fields.hasErrors('twitterUser')}" th:errors="*{twitterUser}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="zipCode" class="col-form-label">ZIP Code</label>
+							<input type="text" th:field="*{zipCode}" class="form-control" id="zipCode" placeholder="zipCode">
+							<span th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}" class="text-danger"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="title" class="col-form-label">Title</label>
+							<input type="text" th:field="*{title}" class="form-control" id="title" placeholder="title">
+							<span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 mt-5">
+							<input type="submit" class="btn btn-primary" value="Update User">
+						</div>
+					</div>    
+				</form>
+				
+			</div>
+		</div>
+    </body>
+</html>
